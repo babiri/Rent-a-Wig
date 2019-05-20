@@ -3,7 +3,8 @@ class CreateWigs < ActiveRecord::Migration[5.2]
     create_table :wigs do |t|
       t.string :color
       t.string :size
-      t.stringname :style
+      t.string :style
+      t.string :name
 
       t.timestamps
     end
