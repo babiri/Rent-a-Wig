@@ -1,31 +1,27 @@
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+<div class="card-category">
   Wigs
 </div>
 
 <%= link_to 'Add a new wig', new_wig_path %>
 
 
-<div class="card-trip">
+<div class="card">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
-  <div class="card-trip-infos">
+  <div class="card-infos">
     <div>
-      <h2>Title here</h2>
-      <p>Short description here!</p>
-      <p>color, size, style, name</p>
+      <h2>
+        <% @wigs.each do |wig| %>
+        <%= link_to wig_path(wig) do %>
+        <%= wig.name  %>
+        <% end %>
+      </h2>
+      <p><%= wig.style  %></p>
+      <p><%= wig.style %> - <%= wig.color %> - <%= wig.size %></p>
+    <% end %>
     </div>
-    <h2 class="card-trip-pricing">99.99€/dia</h2>
-    <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+    <h2 class="card-pricing">99.99€/dia</h2>
+    <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-user avatar-bordered"/>
   </div>
 </div>
 
-
-<ul>
-<% @wigs.each do |wig| %>
-  <li>
-    <%= link_to cocktail_path(cocktail) do %>
-      <%= cocktail.name %>
-    <% end %>
-  </li>
-<% end %>
-</ul>
 
