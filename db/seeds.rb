@@ -7,45 +7,58 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Cleaning database"
 Wig.destroy_all
+style = ["curly", "straigth", "afro", "wavy", "other"]
+
+user = User.new
+user.email = "fake@gmail.com"
+user.name = "John Doe"
+user.bio = "porreiro"
+user.password = "123456"
+user.save
 
 puts 'Creating wigs...'
 wigs_attributes = [
   {
     color: 'red',
     size:  'long',
-    style: 'straigh',
+    style: style.sample,
     name:  'Bob',
-    price: 11
+    price: 11,
+    user: user
   },
   {
     color: 'blond',
     size:  'short',
-    style: 'straigh',
+    style: style.sample,
     name:  'Fernando',
-    price: 24
+    price: 24,
+    user: user
   },
   {
     color: 'black',
     size:  'medium',
-    style: 'wavy',
+    style: style.sample,
     name:  'Albert',
-    price: 12
+    price: 12,
+    user: user
   },
   {
     color: 'green',
     size:  'short',
-    style: 'curly',
+    style: style.sample,
     name:  'José',
-    price: 47
+    price: 47,
+    user: user
   },
   {
     color: 'blue',
     size:  'long',
-    style: 'afro',
+    style: style.sample,
     name:  'Alfredo',
-    price: 923
+    price: 93,
+    user: user
   }
 
 ]
-Wig.create!(wigss_attributes)
+Wig.create!(wigs_attributes)
 puts 'Finished!'
