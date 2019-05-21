@@ -16,6 +16,8 @@ user.bio = "porreiro"
 user.password = "123456"
 user.save
 
+url = "https://cdn.shopify.com/s/files/1/2591/6336/products/Abyhair-Full-Lace-Wigs-Blonde-Human-Hair-613-Color-Body-Wavy-Virgin-Human-Hair-Lace-Front-Human-Wig_2048x.png?v=1552194605"
+
 puts 'Creating wigs...'
 wigs_attributes = [
   {
@@ -24,7 +26,8 @@ wigs_attributes = [
     style: style.sample,
     name:  'Bob',
     price: 11,
-    user: user
+    user: user,
+    remote_photo_url: url
   },
   {
     color: 'blond',
@@ -32,7 +35,8 @@ wigs_attributes = [
     style: style.sample,
     name:  'Fernando',
     price: 24,
-    user: user
+    user: user,
+    remote_photo_url: url
   },
   {
     color: 'black',
@@ -40,7 +44,8 @@ wigs_attributes = [
     style: style.sample,
     name:  'Albert',
     price: 12,
-    user: user
+    user: user,
+    remote_photo_url: url
   },
   {
     color: 'green',
@@ -48,7 +53,8 @@ wigs_attributes = [
     style: style.sample,
     name:  'José',
     price: 47,
-    user: user
+    user: user,
+    remote_photo_url: url
   },
   {
     color: 'blue',
@@ -56,7 +62,8 @@ wigs_attributes = [
     style: style.sample,
     name:  'Alfredo',
     price: 93,
-    user: user
+    user: user,
+    remote_photo_url: url
   }
 
 ]
