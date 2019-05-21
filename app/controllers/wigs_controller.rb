@@ -10,6 +10,7 @@ class WigsController < ApplicationController
   # Display a specific wig
   def show
     @wig = Wig.find(params[:id])
+    authorize @wig
   end
 
   # return HTML form for creating new wig
