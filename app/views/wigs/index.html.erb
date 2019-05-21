@@ -13,7 +13,7 @@
       <% @wigs.each do |wig| %>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
           <div class="card">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+          <%= cl_image_tag wig.photo, crop: :fill %>
             <div class="card-infos">
               <div>
                 <h2>
