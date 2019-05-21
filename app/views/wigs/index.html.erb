@@ -2,25 +2,35 @@
   Wigs
 </div>
 
-<%= link_to 'Add a new wig', new_wig_path %>
+<div class="d-flex m-4">
+  <div class="side-menu">
+    <%= link_to 'Add a new wig', new_wig_path %>
+    side menu
+  </div>
 
-
-<div class="card">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
-  <div class="card-infos">
-    <div>
-      <h2>
-        <% @wigs.each do |wig| %>
-        <%= link_to wig_path(wig) do %>
-        <%= wig.name  %>
-        <% end %>
-      </h2>
-      <p><%= wig.style  %></p>
-      <p><%= wig.style %> - <%= wig.color %> - <%= wig.size %></p>
-    <% end %>
+  <div class="container">
+    <div class="row">
+      <% @wigs.each do |wig| %>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+          <div class="card">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+            <div class="card-infos">
+              <div>
+                <h2>
+                  <%= link_to wig_path(wig) do %>
+                  <%= wig.name  %>
+                  <% end %>
+                </h2>
+                <p><%= wig.style  %></p>
+                <p><%= wig.style %> - <%= wig.color %> - <%= wig.size %></p>
+              </div>
+              <h2 class="card-pricing"><%=wig.price %> €/dia</h2>
+              <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-user avatar-bordered"/>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
-    <h2 class="card-pricing">99.99€/dia</h2>
-    <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-user avatar-bordered"/>
   </div>
 </div>
 
