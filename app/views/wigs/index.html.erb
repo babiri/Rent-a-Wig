@@ -22,8 +22,8 @@
 <ul>
 <% @wigs.each do |wig| %>
   <li>
-    <%= link_to cocktail_path(cocktail) do %>
-      <%= cocktail.name %>
+    <%= link_to wig_path(wig) do %>
+      <%= wig.name %>
     <% end %>
   </li>
 <% end %>
