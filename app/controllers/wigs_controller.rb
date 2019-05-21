@@ -1,7 +1,7 @@
 class WigsController < ApplicationController
   # before_action find_wig, only [:show, :destroy]
   # display list of all wigs
-  skip_before_action :authenticate_user!, only: [:index]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @wigs = policy_scope(Wig).all
