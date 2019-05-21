@@ -37,7 +37,6 @@ class WigsController < ApplicationController
   def update
     @wig = Wig.find(params[:id])
     authorize @wig
-    
     @wig.update(wig_params)
     redirect_to wig_path(@wig)
   end
@@ -45,7 +44,7 @@ class WigsController < ApplicationController
   # Delete a spicific wig
   def destroy
     @wig = Wig.find(params[:id])
-    authorize @wig #will test the policy, if the user is the owner of the wig
+    authorize @wig # will test the policy, if the user is the owner of the wig
     @wig.destroy # if true, allows destroy
     redirect_to wigs_path
   end
