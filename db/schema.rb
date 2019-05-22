@@ -16,11 +16,15 @@ ActiveRecord::Schema.define(version: 2019_05_21_145027) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "wig_id"
     t.date "start_date"
     t.date "end_date"
     t.float "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+    t.index ["wig_id"], name: "index_bookings_on_wig_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -45,12 +49,10 @@ ActiveRecord::Schema.define(version: 2019_05_21_145027) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "price"
-    t.string "photo"
     t.bigint "user_id"
+    t.string "photo"
     t.index ["user_id"], name: "index_wigs_on_user_id"
   end
 
-  add_foreign_key "bookings", "users"
-  add_foreign_key "bookings", "wigs"
   add_foreign_key "wigs", "users"
 end
