@@ -21,7 +21,7 @@ url = "https://cdn.shopify.com/s/files/1/2591/6336/products/Abyhair-Full-Lace-Wi
 puts 'Creating wigs...'
 wigs_attributes = [
   {
-    color: 'blond',
+    color: 'blonde',
     size:  'long',
     style: style.sample,
     name:  'Whoopsie Blond',
@@ -64,8 +64,16 @@ wigs_attributes = [
     price: 93,
     user: user,
     remote_photo_url: "https://powderroomd.com/wp-content/uploads/2016/12/Aphrodisiac-Lace-Font-Wig.png"
+  },
+  {
+    color: 'blue',
+    size:  'long',
+    style: style.sample,
+    name:  'Witchy Beauty',
+    price: 93,
+    user: user,
+    remote_photo_url: "https://powderroomd.com/wp-content/uploads/2016/12/peach4.jpg"
   }
-
 ]
 Wig.create!(wigs_attributes)
 puts 'Finished!'

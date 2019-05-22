@@ -5,9 +5,9 @@ class Wig < ApplicationRecord
 
   mount_uploader :photo, PhotoUploader
 
-  validates :color, presence: true, inclusion: { in: ["blond", "black", "brown", "red", "yellow", "pink", "blue", "green", "other"]}
+  validates :color, presence: true, inclusion: { in: ["blonde", "black", "brown", "red", "yellow", "pink", "blue", "green", "other"]}
   validates :size, presence: true, inclusion: { in: ["short", "medium", "long"] }
-  validates :style, presence: true, inclusion: { in: ["curly", "straigth", "afro", "wavy", "other"] }
+  validates :style, presence: true, inclusion: { in: ["curly", "straight", "afro", "wavy", "other"] }
 
   validates :name, presence: true
   validates :price, presence: true
