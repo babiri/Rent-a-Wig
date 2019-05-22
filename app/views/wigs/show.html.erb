@@ -1,5 +1,20 @@
-<h2><%= @wig.name %></h2>
-<p><%= @wig.color %></p>
-<p><%= @wig.style %></p>
-<p><%= @wig.size %></p>
-<p><%= @wig.price %></p>
+<div class="wig-card d-inline-flex p-2 justify-content-center align-items-center">
+  <div class="wig-picture">
+    <%= cl_image_tag @wig.photo, height: 300, width: 400, crop: :fill %>
+  </div>
+  <div class="wig-description m-3 d-flex flex-column">
+    <div class="wig">
+      <h2><%= @wig.name %></h2>
+      <p><%= @wig.color %></p>
+      <p><%= @wig.style %></p>
+      <p><%= @wig.size %></p>
+      <p><%= @wig.price %> euro sign...</p>
+    </div>
+    <div class="user">
+      <p><%= @wig.user_id %></p>
+    </div>
+  </div>
+</div>
+<div>
+  <%= link_to "Back", wigs_path %>
+</div>
