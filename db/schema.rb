@@ -54,5 +54,7 @@ ActiveRecord::Schema.define(version: 2019_05_21_145027) do
     t.index ["user_id"], name: "index_wigs_on_user_id"
   end
 
+  add_foreign_key "bookings", "users"
+  add_foreign_key "bookings", "wigs"
   add_foreign_key "wigs", "users"
 end
