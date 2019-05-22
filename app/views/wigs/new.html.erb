@@ -1,0 +1,11 @@
+<h2>create a wig</h2>
+<%= simple_form_for(@wig) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :style, collection: [ "curly", "straight", "afro", "wavy", "other" ] %>
+  <%= f.input :color, collection: [ "blonde", "black", "brown", "red", "yellow", "pink", "blue", "green", "other" ] %>
+  <%= f.input :size, collection: ["short", "medium", "long"] %>
+  <%= f.input :price %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.button :submit %>
+<% end %>

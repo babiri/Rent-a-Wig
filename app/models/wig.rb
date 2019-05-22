@@ -11,5 +11,5 @@ class Wig < ApplicationRecord
 
   validates :name, presence: true
   validates :price, presence: true
-  #validates :photo, presence: true
+  # validates :photo, presence: true
 end
