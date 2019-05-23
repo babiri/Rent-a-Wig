@@ -9,12 +9,7 @@ puts "Cleaning database"
 Wig.destroy_all
 style = ["curly", "straight", "afro", "wavy", "other"]
 
-user = User.new
-user.email = "fake@gmail.com"
-user.name = "John Doe"
-user.bio = "porreiro"
-user.password = "123456"
-user.save
+user = User.create!(email: "fake@gmail.com", name: "John Doe", bio: "porreiro", password: "123456", avatar: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Billy_Preston.jpg/225px-Billy_Preston.jpg" )
 
 url = "https://cdn.shopify.com/s/files/1/2591/6336/products/Abyhair-Full-Lace-Wigs-Blonde-Human-Hair-613-Color-Body-Wavy-Virgin-Human-Hair-Lace-Front-Human-Wig_2048x.png?v=1552194605"
 

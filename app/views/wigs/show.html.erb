@@ -8,10 +8,11 @@
       <p><%= @wig.color %></p>
       <p><%= @wig.style %></p>
       <p><%= @wig.size %></p>
-      <p><%= @wig.price %> euro sign...</p>
+      <p><%= @wig.price %> €/day</p>
     </div>
     <div class="user">
-      <p><%= @wig.user_id %></p>
+      <p><%= @wig.user.name %></p>
+      <%= image_tag @wig.user.avatar, class: "avatar"  %>
     </div>
   </div>
 </div>
