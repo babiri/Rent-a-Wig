@@ -5,16 +5,16 @@
   <div class="wig-description m-3 d-flex flex-column">
     <div class="wig">
       <h2><%= @wig.name %></h2>
-      <p><%= @wig.color %></p>
-      <p><%= @wig.style %></p>
-      <p><%= @wig.size %></p>
-      <p><%= @wig.price %> euro sign...</p>
+      <p><em>Color</em>:  <strong><%= @wig.color %></strong></p>
+      <p><em>Style</em>:  <strong><%= @wig.style %></strong></p>
+      <p><em>Size</em>:  <strong><%= @wig.size %></strong></p>
+      <p><em>Price</em>:  <strong><%= @wig.price %> €</strong></p>
     </div>
     <div class="user">
-      <p><%= @wig.user_id %></p>
+      <p><em>User id</em>:  <strong><%= @wig.user_id %></strong></p>
     </div>
+    <%= link_to "Edit Wig", edit_wig_path %>
   </div>
 </div>
 <div>
   <%= link_to "Back", wigs_path %>
-</div>

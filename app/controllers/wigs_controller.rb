@@ -33,6 +33,7 @@ class WigsController < ApplicationController
 
   def edit
     @wig = Wig.find(params[:id])
+    authorize @wig
   end
 
   def update
