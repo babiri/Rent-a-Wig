@@ -14,12 +14,14 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @wig = Wig.find(params[:wig_id])
     @booking = Booking.new(booking_params)
-    authorize @booking
     @booking.user = current_user
+    @booking.wig = @wig
+    authorize @booking
 
     if @booking.save
-      redirect_to @booking, notice: 'booking created'
+      redirect_to dashboard_path, notice: 'booking created'
     else
       render :new
     end
@@ -49,7 +51,7 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :wig, :user)
+    params.require(:booking).permit(:start_date, :end_date, :wig_id, :user_id)
   end
 end
 

@@ -1,9 +1,10 @@
 <div class="container">
-  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+  <div class="form-wrapper" style="width: 500px; margin: 0 auto;">
     <h2>Book a wig</h2>
 
-    <%= simple_form_for :search, method: "get" do |f| %>
-      <%= f.input :start_date, input_html: { id: "range_start" } %>
+    <%= simple_form_for(@booking, as: :booking, method: :post, url: wig_bookings_path) do |f| %>
+      <%= f.input :start_date, as: :string, input_html: { id: "range_start" } %>
+      <%= f.input :end_date, as: :string, input_html: { id: "range_end" } %>
       <%= f.button :submit, "Book now!", class: "btn btn-primary" %>
     <% end %>
   </div>
