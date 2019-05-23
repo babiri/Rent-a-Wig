@@ -13,6 +13,11 @@
     <div class="user">
       <p><%= @wig.user_id %></p>
     </div>
+    <div>
+      <% if policy(Booking).create? %>
+        <%= link_to "Book", new_booking_path %>
+      <% end %>
+    </div>
   </div>
 </div>
 <div>
