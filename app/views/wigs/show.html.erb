@@ -12,7 +12,7 @@
     </div>
     <div class="user">
       <p><%= @wig.user.name %></p>
-      <%= image_tag @wig.user.avatar, class: "avatar"  %>
+      <%= cl_image_tag @wig.user.avatar, class: "avatar"  %>
     </div>
     <div>
       <% if policy(Booking).create? %>
