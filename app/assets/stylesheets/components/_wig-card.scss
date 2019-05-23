@@ -1,3 +1,20 @@
 .wig-card {
-  margin: 100px 25%;
+  width: 600px;
+  height: fit-content;
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+  border-style: solid;
+  border-radius: 30px;
+  border-color: #49163D;
+  border-style: dotted;
+  border-width: 10px;
+  color: #49163D;
+  h2 {
+    font-family: 'Charmonman', cursive;
+  }
 }
