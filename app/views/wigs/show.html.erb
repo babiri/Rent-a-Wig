@@ -14,6 +14,11 @@
       <p><%= @wig.user.name %></p>
       <%= image_tag @wig.user.avatar, class: "avatar"  %>
     </div>
+    <div>
+      <% if policy(Booking).create? %>
+        <%= link_to "Book", new_booking_path %>
+      <% end %>
+    </div>
   </div>
 </div>
 <div>
