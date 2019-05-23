@@ -21,7 +21,7 @@ url = "https://cdn.shopify.com/s/files/1/2591/6336/products/Abyhair-Full-Lace-Wi
 puts 'Creating wigs...'
 wigs_attributes = [
   {
-    color: 'blonde',
+    color: 'blond',
     size:  'long',
     style: style.sample,
     name:  'Whoopsie Blond',
