@@ -1,0 +1,51 @@
+<h1>My Amazing Wigs</h1>
+
+<div class="container">
+    <div class="row">
+      <% @my_wigs.each do |wig| %>
+        <% if wig.user != current_user %>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+            <%= link_to wig_path(wig) do %>
+            <div class="card">
+            <%= cl_image_tag wig.photo, crop: :fill %>
+              <div class="card-infos">
+                <div>
+                  <h2>
+                    <%= wig.name  %>
+                  </h2>
+                  <p><%= wig.style %> - <%= wig.color %> - <%= wig.size %></p>
+                </div>
+              </div>
+            </div>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+<h1>My Bookings</h1>
+
+<<div class="container">
+    <div class="row">
+      <% @my_bookings.each do |booking| %>
+        <% if booking.user == current_user %>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+            <%= link_to wig_path(booking.wig) do %>
+            <div class="card">
+            <%= cl_image_tag booking.wig.photo, crop: :fill %>
+              <div class="card-infos">
+                <div>
+                  <h2>
+                    <%= booking.wig.name %>
+                  </h2>
+                  <p><%= booking.wig.style %> - <%= booking.wig.color %> - <%= booking.wig.size %></p>
+                </div>
+              </div>
+            </div>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>

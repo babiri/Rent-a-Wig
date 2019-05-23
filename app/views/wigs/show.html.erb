@@ -17,8 +17,16 @@
       <p><em>Color</em>:  <strong><%= @wig.color %></strong></p>
       <p><em>Style</em>:  <strong><%= @wig.style %></strong></p>
       <p><em>Size</em>:  <strong><%= @wig.size %></strong></p>
-      <p><em>Price</em>:  <strong><%= @wig.price %> €/day</strong></p>
+      <p><em>Price</em>:  <strong><%= @wig.price %> €</strong></p>
     </div>
+    <div class="user">
+      <p><%= @wig.user.name %></p>
+      <%= cl_image_tag @wig.user.avatar, class: "avatar"  %>
+    </div>
+    <div>
+      <% if policy(Booking).create? %>
+        <%= link_to "Book", new_wig_booking_path(@wig) %>
+      <% end %>
 
     <div class="user d-flex flex-column p-2 justify-content-center">
       <div>
