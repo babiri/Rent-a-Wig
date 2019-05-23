@@ -1,5 +1,9 @@
-a:hover {
-  text-decoration: none;
+a {
+  color: #652157;
+  &:hover {
+    text-decoration: none;
+    color: #49163D;
+  }
 }
 
 .card {
@@ -23,13 +27,15 @@ a:hover {
 }
 
 .card h2 {
+  font-family: 'Charmonman', cursive;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: bold !important;
   margin: 0;
 }
 
 .card p {
-  font-size: 12px;
+  font-size: 15px;
+  font-weight: bolder;
   opacity: .7;
   margin: 0;
 }
@@ -42,9 +48,6 @@ a:hover {
   align-items: flex-end;
   position: relative;
   background-color: #F4F4F4;
-  a {
-    text-decoration: none;
-  }
 }
 
 // .card-infos .card-user {
