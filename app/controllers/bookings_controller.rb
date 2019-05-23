@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-    before_action :find_booking, only: [:show, :destroy]
+  before_action :find_booking, only: [:show, :edit, :destroy]
 
   def index
     @bookings = Booking.all
@@ -10,10 +10,13 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    authorize @booking
   end
 
   def create
     @booking = Booking.new(booking_params)
+    authorize @booking
+    @booking.user = current_user
 
     if @booking.save
       redirect_to @booking, notice: 'booking created'
@@ -46,7 +49,7 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :wig, :user)
   end
 end
 

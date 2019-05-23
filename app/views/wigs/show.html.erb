@@ -11,10 +11,18 @@
       <p><em>Price</em>:  <strong><%= @wig.price %> €</strong></p>
     </div>
     <div class="user">
-      <p><em>User id</em>:  <strong><%= @wig.user_id %></strong></p>
+      <p><%= @wig.user.name %></p>
+      <%= image_tag @wig.user.avatar, class: "avatar"  %>
+    </div>
+    <div>
+      <% if policy(Booking).create? %>
+        <%= link_to "Book", new_booking_path %>
+      <% end %>
+
     </div>
     <%= link_to "Edit Wig", edit_wig_path %>
   </div>
 </div>
 <div>
   <%= link_to "Back", wigs_path %>
+</div>
