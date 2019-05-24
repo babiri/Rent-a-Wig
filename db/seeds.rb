@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Cleaning database"
-User.destroy_all
 Wig.destroy_all
+User.destroy_all
 style = ["curly", "straight", "afro", "wavy", "other"]
 
 user_one = User.new(email: "fermincito123@gmail.com", name: "Fermincito", bio: "Wig user, wig lover, living the wig life! Founder of Make-a-wig Foundation, I'll make your wigs come true!", password: "123456")
