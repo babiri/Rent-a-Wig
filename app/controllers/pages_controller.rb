@@ -8,5 +8,6 @@ class PagesController < ApplicationController
     @user = current_user
     @my_wigs = current_user.wigs
     @my_bookings = current_user.bookings
+    @my_booked_wigs = current_user.wigs_booked
   end
 end
