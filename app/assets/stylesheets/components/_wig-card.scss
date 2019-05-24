@@ -1,4 +1,5 @@
 .wig-card {
+  background-color: white;
   width: 600px;
   height: fit-content;
   position: absolute;
@@ -6,11 +7,12 @@
   bottom: 0;
   left: 0;
   right: 0;
+  padding: 10px;
 
   margin: auto;
   border-style: solid;
   border-radius: 30px;
-  border-color: #49163D;
+  border-color: pink;
   border-style: dotted;
   border-width: 10px;
   color: #49163D;
