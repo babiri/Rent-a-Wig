@@ -7,7 +7,9 @@
       <% if policy(Booking).create? %>
         <%= link_to "Book", new_wig_booking_path(@wig), class: "buttons btn btn-outline-secondary btn-block mt-3" %>
       <% end %>
-      <%= link_to "Edit Wig", edit_wig_path, class: "buttons btn btn-outline-secondary btn-block" %>
+      <% if policy(@wig).update? %>
+        <%= link_to "Edit Wig", edit_wig_path, class: "buttons btn btn-outline-secondary btn-block" %>
+      <% end %>
       <%= link_to "Back", wigs_path, class: "buttons btn btn-outline-secondary btn-block" %>
     </div>
   </div>
