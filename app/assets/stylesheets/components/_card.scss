@@ -18,9 +18,10 @@ a {
   border-radius: 15px;
   border-color: pink;
   &:hover {
+    transform: rotateY(180deg);
     box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
     -5px -5px 30px 15px rgba(0,0,0,0.22);
-    transition: 0.3s;
+    transition: 1s;
   }
 }
 
@@ -54,9 +55,21 @@ a {
   background-color: #F4F4F4;
 }
 
-// .card-infos .card-user {
-//   position: absolute;
-//   right: 16px;
-//   top: -20px;
-//   width: 40px;
+// .flip-card-inner {
+//   position: relative;
+//   width: 100%;
+//   text-align: center;
+//   transition: transform 0.6s;
+//   transform-style: preserve-3d;
+//   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 // }
+
+// .flip-card:hover .flip-card-inner {
+// }
+
+// // .card-infos .card-user {
+// //   position: absolute;
+// //   right: 16px;
+// //   top: -20px;
+// //   width: 40px;
+// // }
