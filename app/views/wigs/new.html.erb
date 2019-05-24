@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container wig-card">
   <h2>create a wig</h2>
   <%= simple_form_for(@wig) do |f| %>
     <%= f.input :name %>
@@ -9,7 +9,7 @@
     <%= f.input :photo %>
     <%= f.input :photo_cache, as: :hidden %>
     <%= f.button :submit %>
+    <%= link_to 'Back', wigs_path %>
   <% end %>
 </div>
 
-<%= link_to 'Back', wigs_path %>
