@@ -4,7 +4,7 @@ class WigsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @wigs = policy_scope(Wig).all
+    @wigs = policy_scope(Wig).order(created_at: :desc)
   end
 
   # Display a specific wig
