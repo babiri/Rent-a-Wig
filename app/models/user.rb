@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   has_many :bookings, dependent: :destroy
   has_many :wigs
-  has_many :wigs, through: :bookings
+  has_many :wigs_booked, through: :bookings, source: :wig
 
   validates :name, presence: true
 end
